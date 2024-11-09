@@ -1,0 +1,106 @@
+.photos{
+	margin-top:0.82rem;
+	display:flex;
+	gap:0.32rem;
+	width:100%;
+
+	&__column{
+		width:48%;
+		display:flex;
+		flex-direction:column;
+		justify-content: space-between;
+	}
+
+	&__photo{
+		width:100%;
+		height:100%;
+		border-radius: 50px;
+		transition:.3s;
+		object-fit:fill;
+	}
+
+	&__container {
+		position:relative;
+		line-height: 0;
+
+		&3{
+			height:9rem;
+		}
+
+		&:after{
+			content:"";
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0;
+			left:0;
+			display:flex;
+			align-items:center;
+			justify-content: center;
+			color:white;
+			background:rgba(0, 0, 0, 0.3);
+			border-radius: 50px;
+			font-size: 0.64rem;
+			font-weight: 600;
+			z-index:1;
+			opacity:0;
+			transition:.8s;
+		}
+
+		&1:after{
+			content:"living room";
+		}
+
+		&2:after {
+			content: "kabinet";
+		}
+
+		&3:after {
+			content: "kitchen";
+		}
+
+		&:hover:after{
+			opacity: 1;
+		}
+
+		&:hover:after{
+			opacity: 1;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		
+		&__column{
+			display:flex;
+			gap:0.3rem;
+			margin:auto;
+		}	
+		
+		&{
+			display:flex;
+			flex-direction: column;
+			gap:0.3rem;
+		}
+
+		&__container{
+			margin:auto;
+
+			&3{
+				width:48%;
+				object-fit: contain;
+			}
+		}
+
+		&__container::after{
+			opacity:1;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		&__column, &__container3{
+			width:100%;
+			height:auto;
+			max-width: 6.57rem;
+		}
+	}
+}

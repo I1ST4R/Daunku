@@ -1,0 +1,97 @@
+.main-block{
+	text-align:center;
+	position:relative;
+	background-image: url("../images/main-img-mini700.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	padding-top:2.5rem;
+	padding-bottom: 4.5rem;
+
+	@media screen and (min-width: 600px) {
+		&{
+			background-image: url("../images/main-img-mini1000.webp");
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		&{
+			background-image: url("../images/main-img.webp");
+		}
+	}
+
+	&__title{
+		max-width:11.2rem;
+		margin:auto;
+		font-family: "700";
+		font-size: 0.82rem;
+	}
+
+	&__text{
+		font-family: "400";
+		font-size: 0.24rem;
+		padding-top: 0.24rem;
+		max-width:5.83rem;
+		line-height: 150%;
+		margin:auto;
+	}
+
+	&__point-product1 {
+		position:absolute;
+		left: 0.6rem;
+		top:4rem;
+	}
+
+	&__point-product2 {
+		position: absolute;
+		left:1.43rem;
+		top:5.5rem;
+	}
+
+	&__product-union{
+		position:absolute;
+		right: 0.3rem;
+		bottom: 4.2rem;
+	}
+
+	&__gradient{
+		width:100%;
+		height:2.08rem;
+		position:absolute;
+		bottom:0;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+		left:0rem;
+	}
+
+	@media screen and (max-width: 1200px) {
+		&__point-product1,
+		&__point-product2,
+		&__product-union{
+			display:none;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		&{
+			padding-bottom:2rem;
+			
+		}
+
+		&__title{
+			font-size: 0.6rem;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		&{
+			padding-bottom:1rem;
+			padding-top:1.8rem;
+		}
+
+		&__title{
+			font-size: 0.5rem;
+		}
+		
+	}
+}
